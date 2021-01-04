@@ -2,11 +2,23 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <a v-bind:href="hcAuthUrl">Sign in</a>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: "Home",
+  computed: {
+    hcAuthUrl() {
+      return this.hcConnect.getRedirectionUrl();
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 #app {

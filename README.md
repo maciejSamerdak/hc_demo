@@ -32,3 +32,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Additional instructions
+Pass HandCash auth token to the home page as a query parameter,
+same way as it is returned from a successful authentication.
